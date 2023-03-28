@@ -14,6 +14,7 @@ namespace ConsoleApp1
             var name = Console.ReadLine();
             Console.WriteLine(name);
             Console.WriteLine(name);
+            Console.WriteLine(name); 
         }
     }
 }
