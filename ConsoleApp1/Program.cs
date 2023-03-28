@@ -13,6 +13,7 @@ namespace ConsoleApp1
             Console.WriteLine("hello world");
             var name = Console.ReadLine();
             Console.WriteLine(name);
+            Console.WriteLine(name);
         }
     }
 }
