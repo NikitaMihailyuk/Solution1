@@ -39,14 +39,14 @@ namespace ConsoleApp4
             bool numberCheck = double.TryParse(Console.ReadLine(), out double operand1);
             if (numberCheck == false)
             {
-                Console.WriteLine("number for opernd 1 is not inputed,error");
+                Console.WriteLine("incorrected operand type was entered");
                 return;
             }
             Console.WriteLine("Input number for operand2");
             bool numberCheck2 = double.TryParse(Console.ReadLine(), out double operand2);
             if (numberCheck2 == false)
             {
-                Console.WriteLine("number for opernd 2 is not inputed,error");
+                Console.WriteLine("incorrected operand type was entered");
                 return;
             }
             Console.WriteLine("Input one operation for operand2\n*\n+\n-\n/\n");
@@ -199,7 +199,7 @@ namespace ConsoleApp4
             bool numberCheck = decimal.TryParse(Console.ReadLine(), out decimal number);
             if (numberCheck == false)
             {
-                Console.WriteLine("number is not inputed,error");
+                Console.WriteLine("incorrected operand type was entered");
                 return;
             }
             if (number <= 0)
@@ -222,7 +222,7 @@ namespace ConsoleApp4
             }
             else
             {
-                Console.WriteLine("WHAT? HOW?? :O???");
+                Console.WriteLine("incorrect number");
             }
 
         }
