@@ -5,6 +5,7 @@ using System.Globalization;
 using System.Linq;
 using System.Net.NetworkInformation;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Home_4
@@ -15,11 +16,11 @@ namespace Home_4
         {
 
             //Task1();
-            //Task2();
+            Task2();
             // Task3();
             // Task4();
             //Task5();
-            Task6();
+            //Task6();
 
             Console.ReadLine();
 
@@ -48,13 +49,13 @@ namespace Home_4
         /// </summary>
         private static void Task2()
         {
-            string taskString1 = "Welcome";
-            string taskString2 = "to";
-            string taskString3 = "the";
-            string taskString4 = "TMS";
-            string taskString5 = "lessons";
-
+            string taskString1 = "\"Welcome\"";
+            string taskString2 = "\"to\"";
+            string taskString3 = "\"the\"";
+            string taskString4 = "\"TMS\"";
+            string taskString5 = "\"lessons\"";
             string result = string.Join(" ", taskString1, taskString2, taskString3, taskString4, taskString5);
+            result = Regex.Replace(result, "\"(.+?)\"", "$1");
             Console.WriteLine(result);
 
         }
@@ -144,7 +145,7 @@ namespace Home_4
 
             string[] arrStr = taskStr1.Split(' ');
 
-            Console.WriteLine("Input string1 with spaces");
+            Console.WriteLine("Input string2 with spaces");
             string taskStr2 = Console.ReadLine();
             string[] arrStr2 = taskStr2.Split(' ');
             int[] arrindex = new int[arrStr.Length];
