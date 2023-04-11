@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -110,7 +111,7 @@ namespace Classwork_3
             int index2 = phrase.IndexOf('*');
             string secret = phrase.Substring(index1+1, index2-index1-1);
 
-            string newstr3 = phrase.Replace("S", "!", IgnoreCase: true, Cultureinfo.InvarianCulture);
+            string newstr3 = phrase.Replace("S","!",true, CultureInfo.InvariantCulture);
             string[] words = phrase.Split(' ');
 
             for(int i=0; i<words.Length; i++)
