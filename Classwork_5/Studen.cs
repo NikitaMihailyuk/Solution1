@@ -18,5 +18,11 @@ namespace Classwork_5
             Group = group;
             Mark = mark;
         }
+        public void ShowInfo()
+        {
+            Console.WriteLine($"Student name {Name}, group {Group} , {Mark}");
+        }
+
     }
+    
 }

@@ -12,20 +12,15 @@ namespace Classwork_5
 
         static void Main(string[] args)
         {
-           StudentsCreator studentsCreator = new StudentsCreator();
-           Student[] arrayOfStudents = studentsCreator.CreateStudents();
-           StudentDisplayer studentDisplayer = new StudentDisplayer();
-           studentDisplayer.DisplayStudents(arrayOfStudents);
+            StudentsCreator studentsCreator = new StudentsCreator();
+            Student[] arrayOfStudents = studentsCreator.CreateStudents();
+            StudentDisplayer studentDisplayer = new StudentDisplayer();
+            studentDisplayer.DisplayStudents(arrayOfStudents);
+
+            Console.ReadLine();
 
 
-
-
-
-
-
-
-
-
+            /*
             string userName = "Alex";
             int userAge = 10;
             int userid = 1;
@@ -59,7 +54,7 @@ namespace Classwork_5
 
 
 
-           andrei.age=DoSomething(class1); ?????
+           andrei.age=DoSomething(1); ?????
 
 
             Console.ReadLine();
@@ -72,6 +67,7 @@ namespace Classwork_5
             class1.age = class1.age + 10;
 
         }
-
+            */
+        }
     }
 }

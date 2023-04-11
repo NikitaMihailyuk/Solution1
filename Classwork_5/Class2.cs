@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Classwork_5
@@ -13,7 +14,7 @@ namespace Classwork_5
             Console.WriteLine();
             foreach (Student student in arrayOfStudents)
             {
-                student.ToString();
+                student.ShowInfo();
             }
         }
        
