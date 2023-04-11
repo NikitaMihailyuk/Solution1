@@ -9,7 +9,7 @@ namespace Classwork_5
     public class StudentsCreator
     {
 
-        public Student CreateStudents()
+        public Student[] CreateStudents()
         {
             Student[] arrayOfStudents = new Student[3];
             string[] names = { "alex", "Dmitri", "Marry" };
@@ -18,8 +18,9 @@ namespace Classwork_5
             for (int i = 0; i < arrayOfStudents.Length; i++)
             {
                 int randMark = rnd.Next(1,10);
-                arrayOfStudents[i]= new Student(names[i],"SuperGroup", randMark);
+                arrayOfStudents[i] = new Student(names[i],"SuperGroup", randMark);
             }
+            return arrayOfStudents;
         }
     }
 }
