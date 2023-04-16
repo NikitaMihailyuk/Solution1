@@ -20,7 +20,7 @@ namespace Classwork_5
             Console.ReadLine();
 
 
-            /*
+           
             string userName = "Alex";
             int userAge = 10;
             int userid = 1;
@@ -67,7 +67,7 @@ namespace Classwork_5
             class1.age = class1.age + 10;
 
         }
-            */
+           
         }
     }
 }
