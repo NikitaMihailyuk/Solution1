@@ -11,14 +11,14 @@ namespace CLasswork_6
      public string Name { get; set; }
  
 
-        public Person() { }
         public Person(string name)
         {
             Name = name;
         }
 
-        public  virtual void Showinfo()
+        public virtual void ShowInfo()
         {
+
             Console.WriteLine(Name);
         }
     }

@@ -18,7 +18,7 @@ namespace CLasswork_6
             }
         public void Showinfo()
         {
-            base.Showinfo();
+            base.ShowInfo();
             Console.WriteLine(Secret);
         }
 

@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Course.cs" />
     <Compile Include="Discepline.cs" />
+    <Compile Include="ITschool.cs" />
     <Compile Include="Mentor.cs" />
     <Compile Include="Operation.cs" />
     <Compile Include="Person.cs" />

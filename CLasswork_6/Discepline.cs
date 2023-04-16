@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 
 namespace CLasswork_6
 {
-    public enum Discepline
+    public enum Discipline
     {
-        [Description(" e45")]
-        dis1,
-        dis2, dis3, dis4, dis5, dis6
+        [Description(" Test sorth")]
+        TestAutoation,
+        math,
+        dis2
     }
 }

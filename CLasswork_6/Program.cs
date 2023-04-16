@@ -10,39 +10,50 @@ namespace CLasswork_6
     {
         static void Main(string[] args)
         {
-            Console.WriteLine();
-            ShowVariables("1234");
-            ShowVariables("QWER", "QWEQR","WEQWR");
+            /*  Console.WriteLine();
+              ShowVariables("1234");
+              ShowVariables("QWER", "QWEQR","WEQWR");
 
 
-            Student student = new Student("Alex", "group");
-            string name = student.Name;
-            student.Showinfo();
+              Student student = new Student("Alex", "group");
+              string name = student.Name;
+              student.Showinfo();
 
-            Person person = new Person(" 12e");
-            person.Name = name;
-            person.Showinfo();
+              Person person = new Person(" 12e");
+              person.Name = name;
+              person.ShowInfo();
 
-            Person person1 = new Student("324", "34324");
+              Person person1 = new Student("324", "34324");
 
-            person1.Name = name; //toka name
+              person1.Name = name; //toka name
 
-            person1.Showinfo(); // v student coz ovveride
+              person1.ShowInfo(); // v student coz ovveride
 
-            Person person2 = new SpecialStudent("324", "34324","324");
+              Person person2 = new SpecialStudent("324", "34324","324");
 
-            person1.Showinfo(); // v special  coz ovveride and base
+              person1.ShowInfo(); // v special  coz ovveride and base
 
-            Opera1(Operation.Devide);
+              Opera1(Operation.Devide);
 
-          ///  string description = Enumeration.GetEnumDescription(Operation.plus);
+            //  string description = Enumeration.GetEnumDescription(Operation.plus);
 
+           */
 
+            Mentor mentor = new Mentor("Mentorsname", Discipline.TestAutoation);
+            Student1 student1 = new Student1("namestu", 10);
+            Student1 student2 = new Student1("namestu2", 10);
+            Student1[] students = { student1, student2 };
+            Course course = new Course(" AUTOTOT", 100, students);
+            ITschool tschool = new ITschool("TMS",mentor, course);
+
+          tschool.ShowInfo();
+
+            Console.ReadLine();
 
         }
         public void SpecialMethod(Person person2)
         {
-           person2.Showinfo();
+           person2.ShowInfo();
         }
 
         public void ShowVariable( int[] a)
@@ -69,7 +80,7 @@ namespace CLasswork_6
             
         }
          
-
+        
 
     }
 }

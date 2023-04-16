@@ -6,18 +6,32 @@ using System.Threading.Tasks;
 
 namespace CLasswork_6
 {
-    internal class Mentor
+    public class Mentor : Person
     {
-        public string Name { get; set; }
-        public Discepline Discepline { get; set; }
 
-        public Mentor() {
-            Name = Name;
-            Discepline = Discepline;    
-        }
-        public  void ShowInfo()
+        public Discipline Discipline { get; set; }
+
+        public Mentor(string name , Discipline discipline) : base(name)
         {
-            Console.WriteLine(" des " + Discepline);
+            Discipline = discipline;    
+        }
+        public override void ShowInfo()
+        {
+            base.ShowInfo();
+            
+            Console.WriteLine(" Discipline " + Discipline);
+            ShowClassInfo();
+        }
+
+        public void ShowClassInfo()
+        {
+            Console.WriteLine(PrepareClass());
+
+        }
+
+        private string PrepareClass()
+        {
+            return "prapered class";
         }
     }
 }

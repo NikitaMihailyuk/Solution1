@@ -19,9 +19,9 @@ namespace CLasswork_6
      //       Console.WriteLine("dsd");
      //       Showinfo();
      //   }
-        public sealed override void Showinfo() //перекрытие
+        public sealed override void ShowInfo() //перекрытие
         {
-            base.Showinfo();
+            base.ShowInfo();
             Console.WriteLine("dsd");
         }
     }

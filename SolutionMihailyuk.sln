@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home_4", "Home_4\Home_4.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home_5", "Home_5\Home_5.csproj", "{1D3F33D5-0509-4EC5-AC11-45EFED48E937}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLasswork_6", "CLasswork_6\CLasswork_6.csproj", "{F9DDC28D-FFA6-43FE-B570-20F15E325271}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Classwork_6", "CLasswork_6\Classwork_6.csproj", "{F9DDC28D-FFA6-43FE-B570-20F15E325271}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
