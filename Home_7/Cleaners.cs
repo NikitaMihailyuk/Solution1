@@ -21,7 +21,7 @@ namespace Home_7
         public void ToClean()
         {
             string infoclean =(Name + " is Cleaning");
-            infoclean.ToString();
+            infoclean = infoclean.ToString();
             Console.WriteLine(infoclean);
         }
     }
