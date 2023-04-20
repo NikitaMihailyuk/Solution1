@@ -19,19 +19,19 @@ Ex(Manager is managing people
     Manager is cooking.
     Cook is cleaning.)
 Переопределить метод ToString() в каждом классе сотрудников ресторана. */
-
-
     internal class Program
     {
-
         static void Main(string[] args)
         {
             PersonalCreator personalCreator = new PersonalCreator();
             Working working = new Working();
+
+            //Create personal
             Employee[] pesonal = personalCreator.PersonalCreate();
+
+            //work logic
             working.Work(pesonal);
             Console.ReadLine();
-
         }
     }
 }

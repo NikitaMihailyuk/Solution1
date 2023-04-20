@@ -8,25 +8,28 @@ namespace Home_7
 {
     public class Managers : Employee, IMenegerable,ICookable 
     {
-
         public Managers(string name, Profession profession) : base(name, profession)
-        {
+        { }
 
-        }
+
         public override string ToString()
         {
-            return ("The Mamager " + base.ToString());
+            return ("The manager is " + Name);
         }
+
+
         public void ToManage()
         {
-            Console.WriteLine(Name + "is Manager");
             Console.WriteLine(Name + "is managing");
         }
+
+
         public void ToCook()
         {
-            Console.WriteLine(Name + "is Manager");
             Console.WriteLine(Name + "is Cooking");
         }
+
+
         public void ToSolving()
         {
             {

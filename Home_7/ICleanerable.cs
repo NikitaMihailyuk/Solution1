@@ -8,6 +8,6 @@ namespace Home_7
 {
     public interface ICleanerable 
     {
-        void ToClean();
+  void ToClean();
     }
 }

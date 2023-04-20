@@ -6,25 +6,27 @@ using System.Threading.Tasks;
 
 namespace Home_7
 {
-     public class Cooks : Employee, ICookable, ICleanerable
+    public class Cooks : Employee, ICookable, ICleanerable
     {
-       
         public Cooks(string name, Profession profession) : base(name, profession)
-        {
+        { }
 
-        }
+
         public override string ToString()
-        { 
-            return ("The Cook "+base.ToString());
+        {
+            return ("The Cook is " + Name);
         }
 
-            public void ToCook()
+
+        public void ToCook()
         {
             Console.WriteLine(Name + " is Cooking");
         }
+
+
         public void ToClean()
         {
-            Console.WriteLine();
+            Console.WriteLine(Name + " is Cleaning");
         }
     }
 }

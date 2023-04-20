@@ -11,6 +11,7 @@ namespace Home_7
         public string Name { get; set; }
         public Profession Profession { get; set; }
 
+
         public Employee(string name, Profession profession) 
         {
             Name = name;

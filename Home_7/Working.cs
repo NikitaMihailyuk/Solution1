@@ -8,6 +8,9 @@ namespace Home_7
 {
     public class Working
     {
+    /// <summary>
+    /// Logic for Employees 
+    /// </summary>
       Showinfo showinfo= new Showinfo();
         public void Work(Employee[] employees)
         {
@@ -15,38 +18,17 @@ namespace Home_7
             {
                if (e.Profession == Profession.Cleaner)
                 {
-                    Cleaners cleaner = new Cleaners(e.Name, Profession.Cleaner);
-                    cleaner.ToString();
-                    cleaner.ToClean();
+                    showinfo.ShowClean(e.Name, Profession.Cleaner);
                 }
                 if (e.Profession == Profession.Cook)
                 {
-                    Cooks cook = new Cooks(e.Name, Profession.Cook);
-                                 
-                    cook.ToCook(); 
-                    cook.ToClean();
-                    showinfo.ShowCook(e.Name, e.Profession);
-                   
+                    showinfo.ShowCook(e.Name, Profession.Cook);
                 }
                 if (e.Profession == Profession.Manager)
                 {
-                    Managers manager = new Managers(e.Name, Profession.Manager);
-                    manager.ToCook();
-                    manager.ToSolving();
-                    manager.ToManage();
+                    showinfo.ShowManager(e.Name, Profession.Manager);
                 }
             }
-              
-             
- 
-
         }
-
-        public void WorkPerson()
-        {
-         
-        }
-
-
     }
 }
