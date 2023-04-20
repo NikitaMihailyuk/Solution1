@@ -13,7 +13,10 @@ namespace Home_7
         {
 
         }
-
+        public override string ToString()
+        {
+            return ("The Mamager " + base.ToString());
+        }
         public void ToManage()
         {
             Console.WriteLine(Name + "is Manager");

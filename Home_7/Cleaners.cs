@@ -13,11 +13,16 @@ namespace Home_7
         {
 
         }
+        public override string ToString()
+        {
+            return("The Cleaner " + base.ToString());
+        }
 
         public void ToClean()
         {
-            Console.WriteLine();
-            Console.WriteLine(Name + " is Cleaning");
+            string infoclean =(Name + " is Cleaning");
+            infoclean.ToString();
+            Console.WriteLine(infoclean);
         }
     }
 }
