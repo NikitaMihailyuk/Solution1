@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace Classwork7
 {
     public class FileDataProvider : IDataProvider
-    {
+    { 
+
         public string GetData()
         {
             return "DAta from file";

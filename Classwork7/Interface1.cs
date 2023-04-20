@@ -8,6 +8,6 @@ namespace Classwork7
 {
     public interface IDataProcessor
     {
-        void DisplayData(IDataProcessor processor);
+        void DisplayData(IDataProvider processor);
     }
 }

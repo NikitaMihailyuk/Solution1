@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Classwork7
 {
-    public class MailDataProcessor
+    public class MailDataProcessor : IDataProcessor
     {
         public void DisplayData(IDataProvider provider)
         {

@@ -10,13 +10,17 @@ namespace Classwork7
     {
         static void Main(string[] args)
         {
+            FileDataProvider provider1 = new FileDataProvider();
+            MailDataProcessor mailDataProcessor = new MailDataProcessor();
 
+            ProcessData(provider1, mailDataProcessor);
         }//// 3 классa / из файла. базы данных. апи;
 
             /// консоль или почта
-            public void ProcessData(IDataProvider provider, IDataProcessor processor)
+            static void ProcessData(IDataProvider provider, IDataProcessor processor)
             {
-                processor.DisplayData(provider);
+            string data = provider.GetData();   
+            processor.DisplayData(provider);
             }
 
       

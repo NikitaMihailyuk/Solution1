@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Classwork7
 {
-    public class ConsoleDataProcessor
+    public class ConsoleDataProcessor : IDataProcessor
     {
         public void  DisplayData(IDataProvider provider)
         {
