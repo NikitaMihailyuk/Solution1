@@ -8,6 +8,7 @@ namespace Home_7
 {
      public class Cooks : Employee, ICookable, ICleanerable
     {
+       
         public Cooks(string name, Profession profession) : base(name, profession)
         {
 
@@ -24,7 +25,6 @@ namespace Home_7
         public void ToClean()
         {
             Console.WriteLine();
-            Console.WriteLine(Name + " is Cleaning");
         }
     }
 }
