@@ -58,6 +58,7 @@ namespace Home_8
             // заполнение массива рандомными значениями
             int randomNumber = 1;
             bool exists;
+
             for (int i = 0; i < array.Length; i++)
             {
                 do // генерируем числа, пока не найдем уникальное
@@ -74,7 +75,8 @@ namespace Home_8
                         }
                     }
                 } while (exists);
-                menu.Add(rations[randomNumber]);
+                menu.Add(rations[i]);
+                Console.WriteLine(menu[i].ProductName + " ");
             }
             return menu;
         }
