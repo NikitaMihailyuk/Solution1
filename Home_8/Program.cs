@@ -24,11 +24,11 @@ Cам рацион представляет пару ключ(День неде�
         {
             RationCreator creator = new RationCreator();
             Dictionary<string, List<Ration>> ration = creator.WeekRation();
-            foreach (Dictionary ration1 in ration) 
+            foreach (string day in ration.Keys) 
             {
-                Console.WriteLine(ration[ration1])
+                Console.WriteLine(ration);
             }
-
+            Console.ReadLine();
         }
     }
 }
