@@ -16,6 +16,5 @@ namespace Home_8
             ProductName = productName;
             Callories = callories;
         }
-
     }
 }

@@ -9,8 +9,6 @@ namespace Home_8
 {
     internal class Program
     {
-
-
 /* Составьте рацион питания для человека на неделю(Person - Содержит поля Name, MaxNumberOfCalories
  * (Макс Количество-калорий потребляемых за день)).
 Cам рацион представляет пару ключ(День недели(Enum) - значение (список продуктов) - List.
@@ -22,14 +20,8 @@ Cам рацион представляет пару ключ(День неде�
 максимальному количеству калорий, потребляемых человеком за день. */
         static void Main(string[] args)
         {
-            RationCreator creator = new RationCreator();
-            Dictionary<string, List<Ration>> ration = creator.WeekRation();
-            Console.WriteLine(ration.Keys.First());
-            foreach (var key in ration)
-            {
-                Console.WriteLine(ration.Values.ToString());
-            }
-            
+            ShowInformation showInformation = new ShowInformation();
+            showInformation.ShowRation();
             Console.ReadLine();
         }
     }
