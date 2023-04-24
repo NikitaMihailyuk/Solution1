@@ -10,12 +10,10 @@ namespace Home_8
     {
         public string Name { get; set; }
         public double MaxNumberOfCalories { get; set; }
-
         public Person(string name, double maxNumberOfCalories)
         {
             Name = name;
             MaxNumberOfCalories = maxNumberOfCalories;
         }
-
     }
 }
