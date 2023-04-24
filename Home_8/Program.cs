@@ -22,6 +22,12 @@ Cам рацион представляет пару ключ(День неде�
 максимальному количеству калорий, потребляемых человеком за день. */
         static void Main(string[] args)
         {
+            RationCreator creator = new RationCreator();
+            Dictionary<string, List<Ration>> ration = creator.WeekRation();
+            foreach (Dictionary ration1 in ration) 
+            {
+                Console.WriteLine(ration[ration1])
+            }
 
         }
     }
