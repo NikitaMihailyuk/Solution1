@@ -16,8 +16,8 @@ namespace Home_8
 
             PersonCreator personCreator = new PersonCreator();
             Person[] persons = personCreator.PersonCreates();
-            
-             
+
+
         }
 
         public Ration[] Rations()
@@ -79,10 +79,19 @@ namespace Home_8
             return menu;
         }
 
-        public Dictionary<string, Ration> WeekRation()
+        public Dictionary<string, List<Ration>> WeekRation()
         {
-            w
-            return 
+            string[] arrays = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+
+
+            Dictionary<string, List<Ration>> weekRation = new Dictionary<string, List<Ration>>();
+            foreach (string s in arrays)
+            {
+                weekRation[s].Add(s, RationRandomize());
+            }
+            return weekRation;
+
         }
+
     }
 }
