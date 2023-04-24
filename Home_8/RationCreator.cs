@@ -16,6 +16,8 @@ namespace Home_8
 
             PersonCreator personCreator = new PersonCreator();
             Person[] persons = personCreator.PersonCreates();
+            
+             
         }
 
         public Ration[] Rations()
@@ -50,19 +52,19 @@ namespace Home_8
             List<Ration> menu = new List<Ration>();
             Ration[] rations = Rations();
             int[] array = new int[10];
-            
+
+
             // создаем новый массив из 10 элементов
             // заполнение массива рандомными значениями
+            int randomNumber = 1;
+            bool exists;
             for (int i = 0; i < array.Length; i++)
             {
-                int randomNumber;
-                bool exists;
-
                 do // генерируем числа, пока не найдем уникальное
                 {
                     exists = false;
-                    randomNumber = new Random().Next(1, 20); // случайное число от 1 до 20
-                    
+                    randomNumber = new Random().Next(0, 20); // случайное число от 1 до 20
+
                     for (int j = 0; j < i; j++) // проверяем, есть ли такое число уже в массиве
                     {
                         if (array[j] == randomNumber)
@@ -72,14 +74,15 @@ namespace Home_8
                         }
                     }
                 } while (exists);
-                menu.AddRange(rations[randomNumber]);
+                menu.Add(rations[randomNumber]);
             }
-
             return menu;
         }
 
-
-
-
+        public Dictionary<string, Ration> WeekRation()
+        {
+            w
+            return 
+        }
     }
 }
