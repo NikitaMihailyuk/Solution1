@@ -9,7 +9,7 @@ namespace Classwork_10
     internal class Program
     {
 
-        delegate void Message();
+       /// delegate void Message();
         delegate void PrintText(string t);
         public delegate int Operation(int i, int j);
         delegate int OperationGeneric <T> (T i, T j);
@@ -20,7 +20,7 @@ namespace Classwork_10
 
             string date = "15/5/2023";
 
-            Message message = delegate () //delegate bez ()
+            Action message = delegate () //delegate bez ()
             {
                 Console.WriteLine("Anon method" + date);
             };
