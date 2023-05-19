@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Home_9
 {
-    internal class SalaryException : Exception
+    public class SalaryException : Exception
     {
+        public SalaryException() : base(message) { }
     }
 }

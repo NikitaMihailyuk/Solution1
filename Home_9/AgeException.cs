@@ -8,5 +8,6 @@ namespace Home_9
 {
     public class AgeException : Exception
     {
+        public AgeException() : base(message) { }
     }
 }
