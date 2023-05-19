@@ -8,6 +8,9 @@ namespace Home_9
 {
     public class AgeException : Exception
     {
-        public AgeException() : base(message) { }
+        public AgeException(string message ) : base(message)
+        {
+            message = "wabifi";
+        }
     }
 }

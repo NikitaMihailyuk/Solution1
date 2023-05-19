@@ -46,8 +46,26 @@ namespace Home_9
             Console.WriteLine(oldPerson.Name);
 
 
-           ///some exeption 
-           
+            ///some exeption 
+            bool arePersonsValid = false;
+
+            try
+            {
+             persons.AddRange(personCreator.WrongPersonCreates());
+            }
+            catch (SalaryException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (AgeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+          
 
 
 

@@ -8,6 +8,10 @@ namespace Home_9
 {
     public class SalaryException : Exception
     {
-        public SalaryException() : base(message) { }
+        public SalaryException(string message) : base(message) 
+        {
+            message = "salaty";
+
+        }
     }
 }

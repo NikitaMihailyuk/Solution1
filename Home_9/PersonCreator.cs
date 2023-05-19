@@ -18,5 +18,27 @@ namespace Home_9
                          };
             return persons;
         }
+
+        public  List<Person> PersonCreates(List<Person> people)
+        {
+
+            try
+            {
+                people.AddRange(new Person[] { new Person("Tom Cruise", 22, 55550.32) });
+            }
+            catch (SalaryException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (AgeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            return new List<Person>();
+        }
     }
 }
