@@ -8,45 +8,44 @@ namespace Home_9
 {
     public class PersonCreator
     {
+        /// <summary>
+        /// All persons in massive in begin
+        /// </summary>
+        /// <returns></returns>
         public Person[] PersonCreates()
         {
             Person[] persons = {
                         new Person("Tom Cruise", 22, 55550.32),
-                        new Person("Aohn Hill", 52, 35550.32),
-                        new Person("Tom Cruise2", 51, 0),
-                        new Person("Ben Affleck", 32, 45550.32)
-                         };
+                        new Person("Anton Hill", 52, 15550.12),
+                        new Person("Anny Smith", 32, 35550.12),
+                        new Person("Tom Zelath", 51, 235550.42),
+                         new Person("Aoi Soma", 41, 235550.42),
+                        new Person("Ben Affleck", 32, 45550.32)};
             return persons;
         }
 
-        public  List<Person> WrongPersonCreates(List<Person> people)
+        /// <summary>
+        /// Try add persons with Exception
+        /// </summary>
+        /// <param name="people"></param>
+        /// <returns></returns>
+        /// <exception cref="AgeException"></exception>
+        /// <exception cref="SalaryException"></exception>
+        public List<Person> WrongPersonCreates(List<Person> people)
         {
+            List<Person> WrongPersons = new List<Person>
+          { new Person("Sam bad Salary", 19, 199),
+            new Person("Yonger Person", 11, 231) };
 
-            List<Person> WrongPerson = new List<Person> { new Person("123", 323, 231) };
-            
-            foreach (Person person  in WrongPerson)
-            
-            { if (person.Age < 18)
-                    throw new AgeException("not 18");
-                if (person.Salary < 1000)
-                    throw new SalaryException("salary not ok");
-            }
-            try
+            foreach (Person person in WrongPersons)
             {
-                people.AddRange(WrongPerson);
+                if (person.Age < 18)
+                    throw new AgeException("New pesons Age yonger than 18");
+                if (person.Salary < 100)
+                    throw new SalaryException("New persons less 100");
             }
-            catch (SalaryException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            catch (AgeException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
+
+            people.AddRange(WrongPersons);
             return people;
         }
     }

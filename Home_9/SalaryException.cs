@@ -10,7 +10,6 @@ namespace Home_9
     {
         public SalaryException(string message) : base(message) 
         {
-            message = "salaty";
 
         }
     }

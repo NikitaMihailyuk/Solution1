@@ -12,19 +12,11 @@ namespace Home_9
         {
             foreach (Person person in persons)
             {
-                Console.WriteLine(person.Name);
-                Console.WriteLine(person.Age);
-                Console.WriteLine(person.Salary);
-            }
-        }
-
-        public void ShowPersonsInfoEnum(IEnumerable<Person> people)
-        {
-            foreach (Person person in people)
-            {
-                Console.WriteLine(person.Name);
-                Console.WriteLine(person.Age);
-                Console.WriteLine(person.Salary);
+                Console.WriteLine("______________________________");
+                Console.WriteLine("The name is: " + person.Name);
+                Console.WriteLine("Tha age: "+ person.Age);
+                Console.WriteLine("The Salary:"+person.Salary);
+                Console.WriteLine("______________________________");
             }
         }
     }

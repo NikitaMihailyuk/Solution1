@@ -10,7 +10,6 @@ namespace Home_9
     {
         public AgeException(string message ) : base(message)
         {
-            message = "wabifi";
         }
     }
 }
