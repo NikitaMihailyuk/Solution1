@@ -47,28 +47,7 @@ namespace Home_9
 
 
             ///some exeption 
-            bool arePersonsValid = false;
-
-            try
-            {
-             persons.AddRange(personCreator.WrongPersonCreates());
-            }
-            catch (SalaryException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            catch (AgeException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
-          
-
-
-
+             persons.AddRange(personCreator.WrongPersonCreates(persons));
             Console.ReadLine();
         }
     }

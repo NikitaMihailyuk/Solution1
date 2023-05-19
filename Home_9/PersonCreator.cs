@@ -19,12 +19,21 @@ namespace Home_9
             return persons;
         }
 
-        public  List<Person> PersonCreates(List<Person> people)
+        public  List<Person> WrongPersonCreates(List<Person> people)
         {
 
+            List<Person> WrongPerson = new List<Person> { new Person("123", 323, 231) };
+            
+            foreach (Person person  in WrongPerson)
+            
+            { if (person.Age < 18)
+                    throw new AgeException("not 18");
+                if (person.Salary < 1000)
+                    throw new SalaryException("salary not ok");
+            }
             try
             {
-                people.AddRange(new Person[] { new Person("Tom Cruise", 22, 55550.32) });
+                people.AddRange(WrongPerson);
             }
             catch (SalaryException ex)
             {
@@ -38,7 +47,7 @@ namespace Home_9
             {
                 Console.WriteLine(ex.ToString());
             }
-            return new List<Person>();
+            return people;
         }
     }
 }
