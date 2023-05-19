@@ -12,7 +12,8 @@ namespace Home_9
         {
             Person[] persons = {
                         new Person("Tom Cruise", 22, 55550.32),
-                        new Person("John Hill", 22, 35550.32),
+                        new Person("Aohn Hill", 52, 35550.32),
+                        new Person("Tom Cruise2", 51, 0),
                         new Person("Ben Affleck", 32, 45550.32)
                          };
             return persons;

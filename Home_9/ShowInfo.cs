@@ -18,5 +18,14 @@ namespace Home_9
             }
         }
 
+        public void ShowPersonsInfoEnum(IEnumerable<Person> people)
+        {
+            foreach (Person person in people)
+            {
+                Console.WriteLine(person.Name);
+                Console.WriteLine(person.Age);
+                Console.WriteLine(person.Salary);
+            }
+        }
     }
 }

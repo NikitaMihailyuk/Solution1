@@ -27,9 +27,27 @@ namespace Home_9
             persons.AddRange(personCreator.PersonCreates());
             ShowInfo showInfo = new ShowInfo();
             showInfo.ShowPersonsInfo(persons);
-        /////
-           
-            persons
+            /////
+
+            Console.WriteLine("With a:");
+            var peopleStartsA = from person in persons
+                                where person.Name.StartsWith("A")
+                                select person;
+            showInfo.ShowPersonsInfoEnum(peopleStartsA);
+
+            Console.WriteLine("bank:");
+            var peopleSalary = from person in persons
+                               where person.Salary > 1000 || person.Age < 30
+                               select person;
+
+            showInfo.ShowPersonsInfoEnum(peopleSalary);
+            Console.WriteLine("OLDMAN:");
+            var oldPerson = persons.Where(person => person.Age>50).First();
+            Console.WriteLine(oldPerson.Name);
+
+
+
+
 
             Console.ReadLine();
         }
