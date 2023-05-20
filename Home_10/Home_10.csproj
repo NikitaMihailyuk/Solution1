@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Home.cs" />
+    <Compile Include="HomeCreator.cs" />
+    <Compile Include="Listner1.cs" />
+    <Compile Include="Listner2.cs" />
+    <Compile Include="Typeinfo.cs" />
+    <Compile Include="PriceMonitor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
