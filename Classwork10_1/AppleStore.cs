@@ -12,6 +12,15 @@ namespace Classwork10_1
         public event Action<List<Phone>> notify;
         // public  Action<List<Phone>> notify, togda eshe peredavat dannie 
         List<Phone> devices = new List<Phone>();
+        public TextSender textSender;
+
+        public AppleStore(Action<List<Phone>> method)
+        {
+        notify +=method; 
+        }
+
+
+        public void AddSubscriber(Action<List<Phone>> method) { notify += method; }
 
 
         public void PutNewPhones(List<Phone> phones)
@@ -22,7 +31,11 @@ namespace Classwork10_1
                 Console.WriteLine($"{phone.name} in sore for {phone.price}");
 
             }
-            notify?.Invoke(devices);
+            if (devices.Count < 10)
+            {
+                notify?.Invoke(devices);
+            }
+           
         }
     }
 }
