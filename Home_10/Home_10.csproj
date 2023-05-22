@@ -45,12 +45,15 @@
   <ItemGroup>
     <Compile Include="Home.cs" />
     <Compile Include="HomeCreator.cs" />
+    <Compile Include="linqtasks.cs" />
     <Compile Include="Listner1.cs" />
     <Compile Include="Listner2.cs" />
     <Compile Include="Typeinfo.cs" />
     <Compile Include="PriceMonitor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserCreator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
