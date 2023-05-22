@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home_9", "Home_9\Home_9.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home_10", "Home_10\Home_10.csproj", "{89485B21-2D95-4B8A-8165-D89EC6BF2176}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Home_SeleniumTests", "Home_SeleniumTests\Home_SeleniumTests.csproj", "{945A6771-4375-4A85-A343-454543641C93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{89485B21-2D95-4B8A-8165-D89EC6BF2176}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89485B21-2D95-4B8A-8165-D89EC6BF2176}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89485B21-2D95-4B8A-8165-D89EC6BF2176}.Release|Any CPU.Build.0 = Release|Any CPU
+		{945A6771-4375-4A85-A343-454543641C93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{945A6771-4375-4A85-A343-454543641C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{945A6771-4375-4A85-A343-454543641C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{945A6771-4375-4A85-A343-454543641C93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
