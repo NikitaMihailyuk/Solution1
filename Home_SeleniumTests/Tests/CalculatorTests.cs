@@ -102,7 +102,7 @@ namespace Home_SeleniumTests.Tests
         }
 
         [TestCase(4, 2, 2)]
-        [TestCase(4, -1, 4)]
+        [TestCase(3, -1, 4)]
         [TestCase(4, 4, 0)]
         public void SummNegativeNumbersTest(double expected, double operand1, double operand2)
         {
@@ -113,7 +113,7 @@ namespace Home_SeleniumTests.Tests
 
         [TestCase(2, 2, ExpectedResult = 4)]
         [TestCase(3, 1, ExpectedResult = 4)]
-        [TestCase(-2, 5, ExpectedResult = 4)]
+        [TestCase(-2, 5, ExpectedResult = 3)]
         public double SummNegativeNumbersReturnTest(double operand1, double operand2)
         {
             return calculator.Add(operand1, operand2);
