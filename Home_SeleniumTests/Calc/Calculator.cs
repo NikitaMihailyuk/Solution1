@@ -13,6 +13,6 @@ namespace Home_SeleniumTests.Calc
         public double Add(double x, double y) => x + y;
         public double Multiply(double x, double y) => x * y;
         public double Subtraction(double x, double y) => x - y;
-        public double Division(double x, double y) => x - y;
+        public double Division(double x, double y) => x / y;
     }
 }

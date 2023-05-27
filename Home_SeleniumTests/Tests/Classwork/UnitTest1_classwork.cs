@@ -1,4 +1,4 @@
-namespace Home_SeleniumTests.Tests
+namespace Home_SeleniumTests.Tests.Classwork
 {
     [TestFixture]
     public class UnitTest : BaseTest

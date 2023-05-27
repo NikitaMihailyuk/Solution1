@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Home_SeleniumTests.Tests
+namespace Home_SeleniumTests.Tests.Classwork
 {
     [TestFixture]
     internal class SummTests
