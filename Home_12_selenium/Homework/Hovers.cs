@@ -36,7 +36,9 @@ namespace Home_12_selenium
             action.MoveToElement(element).Perform();
             var element2 = driver.FindElements(By.TagName("h5"))[0].Text;
             Assert.That(element2, Is.EqualTo(user1));
+
             driver.FindElements(By.PartialLinkText("View"))[0].Click();
+            Console.WriteLine(driver.Url);
             var pageText = driver.FindElement(By.TagName("h1")).Text;
             /// Equal for continue tests
             Assert.That(pageText, Is.EqualTo(errorString));
@@ -46,11 +48,11 @@ namespace Home_12_selenium
             driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/hovers");
             element = driver.FindElements(By.ClassName("figure"))[1];
             action.MoveToElement(element).Perform();
-
             element2 = driver.FindElements(By.TagName("h5"))[1].Text;
             Assert.That(element2, Is.EqualTo(user2));
 
             driver.FindElements(By.PartialLinkText("View"))[0].Click();
+            Console.WriteLine(driver.Url);
             pageText = driver.FindElement(By.TagName("h1")).Text;
             Assert.That(pageText, Is.EqualTo(errorString));
 
@@ -61,8 +63,10 @@ namespace Home_12_selenium
             action.MoveToElement(element).Perform();
             element2 = driver.FindElements(By.TagName("h5"))[2].Text;
             Assert.That(element2, Is.EqualTo(user3));
+          
 
             driver.FindElements(By.PartialLinkText("View"))[0].Click();
+            Console.WriteLine(driver.Url);
             pageText = driver.FindElement(By.TagName("h1")).Text;
             Assert.That(pageText, Is.EqualTo(errorString));
         }
