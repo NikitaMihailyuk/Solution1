@@ -7,19 +7,23 @@ using System.Threading.Tasks;
 
 namespace Home_selenium13.SwagLabs.PageObject
 {
-    internal class LoginPage : BasePage
+    internal class CartPage : BasePage
     {
-        private By UserNameInput = By.Id("user-name");
-        private By PasswordInput = By.XPath("//*[@data-test='password']");
+
+        private By CheckoutButton = By.Id("checkout");
+        private By RemoveBackPackButton = By.XPath("//*[@data-test='remove-sauce-labs-backpack']");
+        private By RemoveSauceLabsBikeLighntButton = By.XPath("//*[@data-test='remove-sauce-labs-bike-light']");
+
+
         private By ErrorMessage = By.CssSelector(".error-message-container.error");
         private By LoginButton = By.CssSelector(".submit-button");
 
-        public const string url = "https://www.saucedemo.com/";
+        public const string url = "https://www.saucedemo.com/cart.html";
 
         public const string STANDART_USER_NAME = "standard_user";
         public const string STANDART_USER_PASSWORD = "secret_sauce";
 
-        public LoginPage(WebDriver webDriver) : base(webDriver)
+        public CartPage(WebDriver webDriver) : base(webDriver)
         {
         }
 
@@ -27,13 +31,5 @@ namespace Home_selenium13.SwagLabs.PageObject
         {
             driver.Navigate().GoToUrl(url);
         }
-
-        public void LoginAsStandartUser()
-        {
-            driver.FindElement(UserNameInput).SendKeys(STANDART_USER_NAME);
-            driver.FindElement(PasswordInput).SendKeys(STANDART_USER_PASSWORD);
-            driver.FindElement(LoginButton).Click();
-        }
-
     }
 }

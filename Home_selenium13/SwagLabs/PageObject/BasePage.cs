@@ -9,13 +9,15 @@ using OpenQA.Selenium.Chrome;
 
 namespace Home_selenium13.SwagLabs.PageObject
 {
-    internal class BasePage
+    internal abstract class BasePage
     {
         protected WebDriver driver;
 
         public BasePage(WebDriver webDriver)
         {
-            WebDriver = webDriver;
+            driver = webDriver;
         }
+
+        public abstract void OpenPage();
     }
 }
