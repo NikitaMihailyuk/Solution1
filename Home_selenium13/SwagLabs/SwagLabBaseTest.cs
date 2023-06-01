@@ -14,12 +14,12 @@ namespace Home_selenium13.SwagLabs
 Написать минимум 5 тестов для приложения и создать Pull Request
 
      */
-    internal class SwagLabBaseTest : BaseTest
+    internal class SwagLabBaseTest :BaseTest
     {
         [SetUp]
         public void SetUp()
         {
-            driver.Navigate().GoToUrl("https://www.saucedemo.com/");
+          // driver.Navigate().GoToUrl("https://www.saucedemo.com/");
         }
     }
 }

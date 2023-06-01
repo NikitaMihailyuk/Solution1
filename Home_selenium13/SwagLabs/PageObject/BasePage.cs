@@ -5,19 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using Home_selenium13.Core;
 
 
 namespace Home_selenium13.SwagLabs.PageObject
 {
-    internal abstract class BasePage
+    internal abstract class BasePage 
     {
-        protected WebDriver driver;
+        protected IWebDriver driver;
 
-        public BasePage(WebDriver webDriver)
+        public BasePage(IWebDriver webDriver)
         {
             driver = webDriver;
         }
 
-        public abstract void OpenPage();
+        public abstract BasePage OpenPage();
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenQA.Selenium;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,7 +36,33 @@ tagname.class
  [attribute=value] [attribute~=value] [attribute|=value] [attribute^=value] [attribute$=value][attribute*=value]
      */
 
-    internal class InventoryPage
+    internal class InventoryPage : BasePage
     {
+
+        //public LeftMenu LeftMenu;
+
+        private By ShoppingCartLink = By.ClassName("shopping_cart_link");
+
+
+        public const string url = "https://www.saucedemo.com/inventory.html";
+
+        public InventoryPage(IWebDriver webDriver) : base(webDriver)
+        {
+            WaitHelper.WaitElement(webDriver, ShoppingCartLink);
+            // LeftMenu = new LefMenu(driver);
+        }
+
+        public override BasePage OpenPage()
+        {
+            driver.Navigate().GoToUrl(url);
+
+            return this;
+        }
+
+        //public LoginPAge Logout()
+        //{
+        //   LeftMenu.Logout()
+        //   return new LoginPage();
+        //}
     }
 }

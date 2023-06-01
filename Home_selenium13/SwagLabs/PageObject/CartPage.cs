@@ -23,13 +23,14 @@ namespace Home_selenium13.SwagLabs.PageObject
         public const string STANDART_USER_NAME = "standard_user";
         public const string STANDART_USER_PASSWORD = "secret_sauce";
 
-        public CartPage(WebDriver webDriver) : base(webDriver)
+        public CartPage(IWebDriver webriwer) : base(webriwer)
         {
         }
 
-        public override void OpenPage()
+        public override CartPage OpenPage()
         {
             driver.Navigate().GoToUrl(url);
+            return this;
         }
     }
 }

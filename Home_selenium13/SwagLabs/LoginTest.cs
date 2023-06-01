@@ -1,4 +1,5 @@
-﻿using Home_selenium13.SwagLabs.PageObject;
+﻿using Home_selenium13.Core;
+using Home_selenium13.SwagLabs.PageObject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,29 @@ namespace Home_selenium13.SwagLabs
         [Test]
         public void Login_StandartUser()
         {
-            var page = new LoginPage(driver);
-            page.OpenPage();
-            page.LoginAsStandartUser();
 
+       ///     Browser.Instance.NavigateToUrl("https://www.saucedemo.com/");
+
+            var inventoryPage = new LoginPage(driver)
+                .OpenPage()
+                .LoginAsStandartUser();
+        }
+
+        [Test]
+        public void Login()
+        {
+            var user = new UserModel()
+            {
+                Password = "asdasdasd",
+                Name = "Test",
+            };
+
+            var page = new LoginPage(driver);
+
+            page.OpenPage().TryToLogin(user);
+
+            page.VerifyErrorMessage();
         }
     }
 }
+
