@@ -9,28 +9,46 @@ namespace Home_selenium13.SwagLabs.PageObject
 {
     internal class CartPage : BasePage
     {
-
-        private By CheckoutButton = By.Id("checkout");
         private By RemoveBackPackButton = By.XPath("//*[@data-test='remove-sauce-labs-backpack']");
         private By RemoveSauceLabsBikeLighntButton = By.XPath("//*[@data-test='remove-sauce-labs-bike-light']");
-
-
-        private By ErrorMessage = By.CssSelector(".error-message-container.error");
-        private By LoginButton = By.CssSelector(".submit-button");
+        private By FirstItemPrice = By.XPath("[@class='inventory_item_price'][0]");
+        private By SecondItemPrice = By.XPath("[@class='inventory_item_price'][1]");
+        private By ContinueShoppingButton = By.CssSelector("#continue-shopping");
+        private By CheckoutButton = By.CssSelector(".btn.checkout_button");
+        private By CounterProducts = By.XPath("//*[@id='shopping_cart_container']/a/span");
 
         public const string url = "https://www.saucedemo.com/cart.html";
 
-        public const string STANDART_USER_NAME = "standard_user";
-        public const string STANDART_USER_PASSWORD = "secret_sauce";
 
-        public CartPage(IWebDriver webriwer) : base(webriwer)
-        {
-        }
-
+        public CartPage(IWebDriver webriwer) : base(webriwer) { }
         public override CartPage OpenPage()
         {
             driver.Navigate().GoToUrl(url);
             return this;
+        }
+
+        public CheckoutPage OpenCheckOutPage()
+        {
+            driver.FindElement(CheckoutButton).Click();
+            return new CheckoutPage(driver);
+        }
+        public InventoryPage ContinueShoppingPage()
+        {
+            driver.FindElement(ContinueShoppingButton).Click();
+            return new InventoryPage(driver);
+        }
+        public void RemoveProductBackPack()
+        {
+            driver.FindElement(RemoveBackPackButton).Click();
+        }
+        public void RemoveProductBikeLight()
+        {
+            driver.FindElement(RemoveSauceLabsBikeLighntButton).Click();
+        }
+        public int CountProducts()
+        {
+            var count = driver.FindElement(CounterProducts).Text;
+            return Int32.Parse(count);
         }
     }
 }

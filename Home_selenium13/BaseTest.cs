@@ -24,7 +24,7 @@ namespace Home_selenium13
         [TearDown]
         public void TearDown()
         {
-            driver.Quit(); // сессия
+          //  driver.Quit(); // сессия
         }
     }
 }

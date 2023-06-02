@@ -13,6 +13,7 @@ namespace Home_selenium13.SwagLabs.PageObject
         private By PasswordInput = By.XPath("//*[@data-test='password']");
         private By ErrorMessage = By.CssSelector(".error-message-container.error");
         private By LoginButton = By.CssSelector(".submit-button");
+        private By BasketCounter = By.CssSelector("#shopping_cart_container");
 
         public const string url = "https://www.saucedemo.com/";
 
@@ -34,10 +35,7 @@ namespace Home_selenium13.SwagLabs.PageObject
                 Name = STANDART_USER_NAME,
                 Password = STANDART_USER_PASSWORD,
             };
-
             TryToLogin(user);
-            driver.FindElement(LoginButton).Click();
-
             return new InventoryPage(driver);
         }
 

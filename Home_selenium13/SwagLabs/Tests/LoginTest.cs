@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Home_selenium13.SwagLabs
+namespace Home_selenium13.SwagLabs.Tests
 {
     internal class LoginTest : SwagLabBaseTest
     {
@@ -14,9 +14,6 @@ namespace Home_selenium13.SwagLabs
         [Test]
         public void Login_StandartUser()
         {
-
-       ///     Browser.Instance.NavigateToUrl("https://www.saucedemo.com/");
-
             var inventoryPage = new LoginPage(driver)
                 .OpenPage()
                 .LoginAsStandartUser();

@@ -33,9 +33,8 @@ namespace Home_selenium13.Core
         {
             //choose browser
          //    var isHeadless = bool.Parse(TestContext.Parameters.Get("Headless"));
-        ///     var wait = int.Parse(TestContext.Parameters.Get("ImplicityWait"));
+            var wait = int.Parse(TestContext.Parameters.Get("ImplicityWait"));
             bool isHeadless = false;
-            int wait = 15;
             if (isHeadless == true)
             {
                 ChromeOptions options = new ChromeOptions();
@@ -51,7 +50,7 @@ namespace Home_selenium13.Core
                 driver = new ChromeDriver();
             }
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(wait);
-           /// driver.Manage().Window.Maximize();
+            driver.Manage().Window.Maximize();
         }
 
         public void CloseBrowser()
