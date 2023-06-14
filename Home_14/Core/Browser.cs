@@ -33,9 +33,8 @@ namespace Home_14
         private Browser()
         {
             //choose browser
-         //    var isHeadless = bool.Parse(TestContext.Parameters.Get("Headless"));
+             var isHeadless = bool.Parse(TestContext.Parameters.Get("Headless"));
             var wait = int.Parse(TestContext.Parameters.Get("ImplicityWait"));
-            bool isHeadless = false;
             if (isHeadless == true)
             {
                 ChromeOptions options = new ChromeOptions();

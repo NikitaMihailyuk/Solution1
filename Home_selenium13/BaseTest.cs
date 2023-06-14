@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using Home_selenium13.Core;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using Home_selenium13.Core;
 
 
 namespace Home_selenium13

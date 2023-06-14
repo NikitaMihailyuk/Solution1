@@ -9,7 +9,7 @@ using OpenQA.Selenium.Chrome;
 
 namespace Home_14
 {
-    internal abstract class BasePage 
+    internal abstract class BasePage
     {
         protected IWebDriver driver;
 

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using Home_14.Core;
 
 
 namespace Home_14
@@ -22,7 +23,7 @@ namespace Home_14
         [TearDown]
         public void TearDown()
         {
-          //  driver.Quit(); // сессия
+            //  driver.Quit(); // сессия
         }
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
-
+using System.Runtime.Intrinsics.X86;
+using OpenQA.Selenium.DevTools;
 
 namespace Home_12_selenium
 {
@@ -20,55 +21,54 @@ namespace Home_12_selenium
     internal class Hovers : BaseTest
     {
 
+        string errorString = "Not Found";
+        string user1 = "name: user1";
+        string user2 = "name: user2";
+        string user3 = "name: user3";
+
+
         [Test]
         public void HoversTest()
         {
-            string errorString = "Not Found";
-            string user1 = "name: user1";
-            string user2 = "name: user2";
-            string user3 = "name: user3";
-
             Actions action = new Actions(driver);
-            driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/hovers");
-
+            ReturnToHovers();
             ///Test 1 user
-            var element = driver.FindElements(By.ClassName("figure"))[0];
-            action.MoveToElement(element).Perform();
-            var element2 = driver.FindElements(By.TagName("h5"))[0].Text;
+            var element2 = UserTextSelector(0);
             Assert.That(element2, Is.EqualTo(user1));
-
-            driver.FindElements(By.PartialLinkText("View"))[0].Click();
-            Console.WriteLine(driver.Url);
-            var pageText = driver.FindElement(By.TagName("h1")).Text;
+            var pageText = UserErrorSelector();
             /// Equal for continue tests
             Assert.That(pageText, Is.EqualTo(errorString));
-
-
             ///Test 2 user
-            driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/hovers");
-            element = driver.FindElements(By.ClassName("figure"))[1];
-            action.MoveToElement(element).Perform();
-            element2 = driver.FindElements(By.TagName("h5"))[1].Text;
+            ReturnToHovers();
+            element2 = UserTextSelector(1);
             Assert.That(element2, Is.EqualTo(user2));
-
-            driver.FindElements(By.PartialLinkText("View"))[0].Click();
-            Console.WriteLine(driver.Url);
-            pageText = driver.FindElement(By.TagName("h1")).Text;
+            pageText = UserErrorSelector();
             Assert.That(pageText, Is.EqualTo(errorString));
-
             ///Test 3 user
-
-            driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/hovers");
-            element = driver.FindElements(By.ClassName("figure"))[2];
-            action.MoveToElement(element).Perform();
-            element2 = driver.FindElements(By.TagName("h5"))[2].Text;
+            ReturnToHovers();
+            element2 = UserTextSelector(2);
             Assert.That(element2, Is.EqualTo(user3));
-          
-
-            driver.FindElements(By.PartialLinkText("View"))[0].Click();
-            Console.WriteLine(driver.Url);
-            pageText = driver.FindElement(By.TagName("h1")).Text;
+            pageText = UserErrorSelector();
             Assert.That(pageText, Is.EqualTo(errorString));
         }
+
+        public string UserTextSelector(int userNumber)
+        {
+            Actions action = new Actions(driver);
+            var element = driver.FindElements(By.ClassName("figure"))[userNumber];
+            action.MoveToElement(element).Perform();
+            return driver.FindElements(By.TagName("h5"))[userNumber].Text;
+        }
+        public string UserErrorSelector()
+        {
+            driver.FindElements(By.PartialLinkText("View"))[0].Click();
+            Console.WriteLine(driver.Url);
+            return driver.FindElement(By.TagName("h1")).Text;
+        }
+        public void ReturnToHovers()
+        {
+            driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/hovers");
+        }
+
     }
 }

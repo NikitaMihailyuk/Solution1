@@ -28,7 +28,8 @@ namespace Home_14
         }
 
         public void ClickCheckbox()
-        {
+        { 
+             driver.TimeSpan.FromMilliseconds(40000);
             driver.FindElement(Checkbox).Click();
         }
         public void RemmoveButton()
@@ -53,10 +54,10 @@ namespace Home_14
         }
 
 
-        //   public DynamicControlsPage OpenDynamicControlsPage()
-        //   {
-        //      driver.FindElement(CheckoutButton).Click();
-        //      return new DynamicControlsPage(driver);
-        //  }   
+          public DynamicControlsPage OpenDynamicControlsPage()
+         {
+            driver.FindElement(CheckoutButton).Click();
+            return new DynamicControlsPage(driver);
+         }   
     }
 }

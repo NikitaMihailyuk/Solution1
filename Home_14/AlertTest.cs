@@ -10,7 +10,6 @@ using OpenQA.Selenium.Interactions;
 
 namespace Home_14
 {
-    [TestFixture]
     public class AlertTest :BaseTest
     {
         [Test]
