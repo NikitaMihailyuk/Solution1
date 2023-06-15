@@ -16,12 +16,14 @@ namespace Home_SeleniumTests.Selenium
             //var
             var expectedUrl = "https://the-internet.herokuapp.com/add_remove_elements/";
             // act - assert
-            driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/");
+            Browser.Instanse.Driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/");
             driver.Manage().Window.Maximize();
+
+
             ///   By by = "34534";
             /// var element =  driver.FindElement(By.LinkText("Add/Remove Elements"));
             ///  element.Click();
-            driver.FindElement(By.LinkText("Add/Remove Elements")).Click();
+            Browser.Instanse.Driver.FindElement(By.LinkText("Add/Remove Elements")).Click();
             Assert.That(driver.Url, Is.EqualTo(expectedUrl));
 
             driver.FindElement(By.TagName("button")).Click();

@@ -5,22 +5,21 @@ namespace Home_SeleniumTests.Selenium
 {
     public class BaseTest
     {
-        protected WebDriver driver;
+        protected IWebDriver driver = Browser.Instanse.Driver;
 
         [SetUp]
         public void SetUp()
         {
             // var driver = new ChromeDriver(@"C:\webdriver");
             // WebDriver ie = new InternetExplorerDriver();
-            driver = new ChromeDriver();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+           /// driver = new ChromeDriver();
+          ///  driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
-
 
         [TearDown]
         public void TearDown()
         {
-            driver.Quit(); // сессия
+           Browser.Instanse.Driver.Close();
         }
     }
 }
