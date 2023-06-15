@@ -17,7 +17,6 @@ namespace Home_14
             Browser.Instance.NavigateToUrl("http://the-internet.herokuapp.com/upload");
          //   Browser.Instance.Driver.FindElement(By.Id("file-upload")).SendKeys(DirectoryHelper.GetTestDataFolderPath() + "homework14.jpg");
             Browser.Instance.Driver.FindElement(By.Id("file-upload")).SendKeys(@"C:\Users\Никита\Source\Repos\NikitaMihailyuk\Solution1\Home_14\Core\homework14.jpg");
-
             var text = Browser.Instance.Driver.FindElement(By.Id("file-upload")).Text;
             text = Browser.Instance.Driver.FindElement(By.Id("file-upload")).GetAttribute("value");
             Console.WriteLine(text);
