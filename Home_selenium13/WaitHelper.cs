@@ -8,21 +8,21 @@ using System.Threading.Tasks;
 
 namespace Home_selenium13
 {
-    internal class WaitHelper : BaseTest
+    internal class WaitHelper
     {
+            public static void WaitElement(IWebDriver driver, By by, int time = 10)
+            {
+                new WebDriverWait(driver, TimeSpan.FromSeconds(time)).Until(element => element.FindElement(by));
+            }
 
-        protected void WaitElement(WebDriver driver, By by, int time=10)
-        {
-            new WebDriverWait(driver, TimeSpan.FromSeconds(time)).Until(element => element.FindElement(by));
-        }
-        protected void WaitElementWithTitle(WebDriver driver, By by, string text, int time = 10)
-        {
-            new WebDriverWait(driver, TimeSpan.FromSeconds(time)).Until(element => element.FindElement(by).Text.ToLower() == text.ToLower());
-        }
-        protected void WaitElements(WebDriver driver, By by, int count, int time = 10)
-        {
-            new WebDriverWait(driver, TimeSpan.FromSeconds(time)).Until(element => element.FindElement(by).Count == count);
+            public static void WaitElementWithTitle(IWebDriver driver, By by, string text, int time = 10)
+            {
+                new WebDriverWait(driver, TimeSpan.FromSeconds(time)).Until(element => element.FindElement(by).Text.ToLower() == text.ToLower());
+            }
 
-
+            public static void WaitElements(IWebDriver driver, By by, int count, int time = 10)
+            {
+                new WebDriverWait(driver, TimeSpan.FromSeconds(time)).Until(element => element.FindElements(by).Count == count);
+            }
     }
 }
