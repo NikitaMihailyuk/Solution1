@@ -10,7 +10,7 @@ namespace Home_14
     {
         public static string GetTestDataFolderPath()
         {
-            return Environment.CurrentDirectory + "\\TestData\\";
+            return Environment.CurrentDirectory + "\\Core\\";
         }
     }
 }

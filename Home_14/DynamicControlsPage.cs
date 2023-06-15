@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace Home_14
 
         private By Checkbox = By.CssSelector("input[type='checkbox']");
         private By RemoveButton = By.CssSelector("button[type ='button']");
-        private By EnableDisableButton = By.CssSelector("button[onclick ='SwapInput']");
+        private By EnableDisableButton = By.CssSelector("button[onclick ='swapInput()']");
         private By Text = By.XPath("//*[@id='message']");
         private By InputTextField = By.CssSelector("input[type ='text']");
 
@@ -29,7 +30,6 @@ namespace Home_14
 
         public void ClickCheckbox()
         { 
-             driver.TimeSpan.FromMilliseconds(40000);
             driver.FindElement(Checkbox).Click();
         }
         public void RemmoveButton()
@@ -39,6 +39,7 @@ namespace Home_14
 
         public string TextExpecter()
         {
+            TimeSpan.FromSeconds(5);
             var text= driver.FindElement(Text).Text.ToString() ;
             return text; 
         }
@@ -54,10 +55,10 @@ namespace Home_14
         }
 
 
-          public DynamicControlsPage OpenDynamicControlsPage()
-         {
-            driver.FindElement(CheckoutButton).Click();
-            return new DynamicControlsPage(driver);
-         }   
+        ///  public DynamicControlsPage OpenDynamicControlsPage()
+       ///  {
+         ///   driver.FindElement(CheckoutButton).Click();
+         ///   return new DynamicControlsPage(driver);
+       //  }   
     }
 }

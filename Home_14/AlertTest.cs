@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
+using Home_14.Pages;
 
 
 namespace Home_14
@@ -15,13 +16,14 @@ namespace Home_14
         [Test]
         public void AcceptAlert()
         {
-            Browser.Instance.NavigateToUrl("https://the-internet.herokuapp.com/context_menu");
             Actions action = new Actions(driver);
-            
-
-            Browser.Instance.ExecuteScript("arguments[0].click();", button);
-
+            var alertPage = new AlertPage(driver).OpenPage();
+     
+            alertPage.OpenContext();
+            var text = alertPage.AlertText();
+            Assert.That(text, Is.EqualTo("You selected a context menu"));
             Browser.Instance.AcceptAllert();
+        ///   Browser.Instance.ExecuteScript("arguments[0].click();",button);
         }
 
 

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using OpenQA.Selenium.Interactions;
 
 namespace Home_14
 {
@@ -34,8 +35,9 @@ namespace Home_14
         {
             //choose browser
              var isHeadless = bool.Parse(TestContext.Parameters.Get("Headless"));
-            var wait = int.Parse(TestContext.Parameters.Get("ImplicityWait"));
-            if (isHeadless == true)
+             var wait = int.Parse(TestContext.Parameters.Get("ImplicityWait"));
+            isHeadless = false;
+            if (isHeadless)
             {
                 ChromeOptions options = new ChromeOptions();
                 options.AddArgument("--headless");
@@ -47,10 +49,14 @@ namespace Home_14
             }
             else
             {
+                ChromeOptions options = new ChromeOptions();
+                options.AddArgument("--disable-gpu");
+                options.AddArgument("incognito");
+                options.AddArgument("--start-maximized");
                 driver = new ChromeDriver();
+
             }
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(wait);
-            driver.Manage().Window.Maximize();
         }
 
         public void CloseBrowser()

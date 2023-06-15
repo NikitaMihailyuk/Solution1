@@ -5,16 +5,32 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using Home_14.Core;
 
 namespace Home_14
 {
-    public class  DynamicControlsTests : BaseTest
+    public class DynamicControlsTests : BaseTest
     {
+       
         [Test]
         public void DynamicControlsTest()
         {
-            var cartPage = new DynamicControlsPage(driver).OpenPage().OpenDynamicControlsPage();
+            var cartPage = new DynamicControlsPage(driver).OpenPage();
             cartPage.ClickCheckbox();
+            cartPage.RemmoveButton();
+            string Text1 = cartPage.TextExpecter();
+            Assert.That(Text1, Is.EqualTo("It's gone!"));
+            try
+            {
+                cartPage.ClickCheckbox();
+                cartPage.FieldInput();
+            }
+            catch (Exception ex)
+            {}
+            cartPage.InputButton();
+            Text1 = cartPage.TextExpecter();
+            Assert.That(Text1, Is.EqualTo("It's enabled!"));
+            cartPage.FieldInput();
+
+        }
     }
 }

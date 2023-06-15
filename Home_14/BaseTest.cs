@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using Home_14.Core;
 
 
 namespace Home_14
